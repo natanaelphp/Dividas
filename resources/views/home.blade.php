@@ -1,17 +1,21 @@
-@extends('app')
+@extends('template.template')
 
 @section('content')
-<div class="container">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default">
-				<div class="panel-heading">Home</div>
+	
+	<!--@parent-->
 
-				<div class="panel-body">
-					You are logged in!
-				</div>
-			</div>
-		</div>
+	<div class="central-box">
+		<img src="images/{{$ArrowDirection}}.png"><br>
+		<h1>R$ {{ $value }}</h1>
 	</div>
-</div>
-@endsection
+
+	<div class="central-box">
+		<a href='transactions/add/1'>
+			<img src="images/Natanael.jpg" class="profile">
+		</a>
+		<a href='transactions/add/2'>
+			<img src="images/Marielen.jpg" class="profile">
+		</a>
+	</div>
+
+@stop
