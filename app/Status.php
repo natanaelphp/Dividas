@@ -10,7 +10,7 @@ class Status extends Model
 
 	public function getArrowDirection()
 	{
-		if ($this->receiver == 1) return $ArrowDirection = 'left';
-		if ($this->receiver == 2) return $ArrowDirection = 'right';
+		if ($this->receiver == 1) return 'left';
+		if ($this->receiver == 2) return 'right';
 	}
 }
