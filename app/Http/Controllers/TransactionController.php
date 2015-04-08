@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Http\Requests\TransactionRequest;
 
 class TransactionController extends Controller {
 
@@ -37,9 +38,9 @@ class TransactionController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(TransactionRequest $request)
 	{
-		print_r($_POST);
+		print_r($request->all());
 	}
 
 	/**
