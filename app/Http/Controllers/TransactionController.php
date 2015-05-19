@@ -1,15 +1,20 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Request;
-
 use App\User;
+use App\Transaction;
 use App\Http\Requests\TransactionRequest;
 
 class TransactionController extends Controller
 {
+	private $transaction;
+
+	public function __construct(Transaction $transaction)
+	{
+		$this->transaction = $transaction;
+	}
+
 	public function index()
 	{
 		
@@ -23,9 +28,12 @@ class TransactionController extends Controller
 		return View('transactions.new')->with('user', $user);
 	}
 
-	public function store(TransactionRequest $request)
+	public function store($id = NULL, TransactionRequest $request)
 	{
-		print_r($request->all());
+		$inputs = $request->all();
+		$inputs['id_user'] = $id;
+
+		$this->transaction->create($inputs);
 	}
 
 	public function show($id)
