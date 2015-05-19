@@ -22,8 +22,8 @@ class TransactionRequest extends Request {
 	public function rules()
 	{
 		return [
-			'valor' => 'required|numeric',
-			'desc'	=> 'required'
+			'value' 		=> 'required|numeric',
+			'description'	=> 'required'
 		];
 	}
 

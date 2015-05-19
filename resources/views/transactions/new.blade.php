@@ -18,11 +18,11 @@
 
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-		<label for="valor">Valor:</label>
-		<input type="text" name="valor">
+		<label for="value">Valor:</label>
+		<input type="text" name="value" value="{{ old('value') }}">
 
-		<label for="desc">Descrição:</label>
-		<input type="text" name="desc">
+		<label for="description">Descrição:</label>
+		<input type="text" name="description" value="{{ old('description') }}">
 
 		<input type="submit" value="Inserir">
 

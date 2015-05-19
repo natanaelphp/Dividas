@@ -2,8 +2,8 @@
 
 use App\Status;
 
-class HomeController extends Controller {
-
+class HomeController extends Controller
+{
 	public function __construct()
 	{
 		
@@ -20,5 +20,5 @@ class HomeController extends Controller {
 
 		return View('home')->with($data);
 	}
-
+	
 }
