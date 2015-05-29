@@ -6,6 +6,9 @@ use App\User;
 use App\Transaction;
 use App\Http\Requests\TransactionRequest;
 
+use App\Events\TransactionCreated;
+use Event;
+
 class TransactionController extends Controller
 {
 	private $transaction;
@@ -33,7 +36,10 @@ class TransactionController extends Controller
 		$inputs = $request->all();
 		$inputs['id_user'] = $id;
 
-		$this->transaction->create($inputs);
+		$transaction = $this->transaction->create($inputs);
+
+		$res = Event::fire( new TransactionCreated($transaction) );
+		dd($res);
 	}
 
 	public function show($id)
