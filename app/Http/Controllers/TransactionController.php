@@ -38,8 +38,9 @@ class TransactionController extends Controller
 
 		$transaction = $this->transaction->create($inputs);
 
-		$res = Event::fire( new TransactionCreated($transaction) );
-		dd($res);
+		Event::fire( new TransactionCreated($transaction) );
+
+		return redirect('/');
 	}
 
 	public function show($id)
