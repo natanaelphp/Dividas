@@ -13,8 +13,11 @@
 
 $router->get('/', 'HomeController@index');
 
+$router->get('transactions', 'TransactionController@index');
+
 $router->get('transactions/add/{id}', 'TransactionController@create');
 $router->post('transactions/add/{id}', 'TransactionController@store');
+
 
 /*
 Route::controllers([

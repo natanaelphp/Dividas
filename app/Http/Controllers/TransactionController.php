@@ -20,7 +20,9 @@ class TransactionController extends Controller
 
 	public function index()
 	{
-		
+		$transactions = $this->transaction->orderBy('created_at', 'desc')->paginate(8);
+
+		return View('transactions.index')->with('transactions', $transactions);
 	}
 	
 	public function create($id = NULL)

@@ -1,5 +1,7 @@
 @extends('template.template')
 
+<a href="{{{ url('transactions') }}}">Listar Transações</a>	
+
 @section('content')
 	
 	<!--@parent-->
