@@ -7,7 +7,7 @@
 
 body{
 	font-family: Ubuntu;
-	font-size: 1em;	
+	font-size: 1em;
 	background: url('../images/bg.jpg') top;
 }
 
@@ -132,7 +132,6 @@ h1{
 /*----------------------------------------------------------------------------------------*/
 
 .tabela{
-	border-collapse: collapse;
 	background-color: #FFF;
 	border-radius: 5px;
 }
@@ -141,14 +140,14 @@ h1{
 			width: 60%;
 		}
 	}
-	
+
 .tabela td, .tabela th{
 	padding: 8px;
 	color: #333;
 }
 
 .tabela tr:nth-child(odd) {
-	
+
 }
 
 .tabela tr:nth-child(even) {

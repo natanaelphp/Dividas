@@ -24,7 +24,7 @@ class TransactionController extends Controller
 
 		return View('transactions.index')->with('transactions', $transactions);
 	}
-	
+
 	public function create($id = NULL)
 	{
 		$id = (int)$id;
@@ -47,22 +47,22 @@ class TransactionController extends Controller
 
 	public function show($id)
 	{
-		
+
 	}
 
 	public function edit($id)
 	{
-		
+
 	}
 
 	public function update($id)
 	{
-		
+
 	}
 
 	public function destroy($id)
 	{
-		
+
 	}
 
 }
